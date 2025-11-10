@@ -11,6 +11,7 @@
 - TF-IDF + Logistic Regression，支援衍生統計特徵
 - 視覺化：類別分佈、Top Tokens、ROC/PR、Threshold Sweep
 - Streamlit 儀表板：資料探索 + 模型指標 + 互動推論
+- 內建預訓練模型：`models/spam_pipeline.joblib` + `meta.json`，部署即用
 - OpenSpec 需求檔：`openspec/changes/spam-visual-pipeline/spec.yaml`
 
 ## 快速開始

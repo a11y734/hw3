@@ -1,0 +1,49 @@
+{
+  "label_col": "label",
+  "text_col": "text_clean",
+  "numeric_cols": [
+    "text_clean_char_len",
+    "text_clean_token_len",
+    "text_clean_digit_count",
+    "text_clean_uppercase_count",
+    "text_clean_percent_caps",
+    "text_clean_avg_token_len",
+    "text_clean_bang_count"
+  ],
+  "positive_label": "spam",
+  "threshold": 0.5,
+  "vectorizer": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 3000,
+    "sublinear_tf": true
+  },
+  "model": {
+    "type": "LogisticRegression",
+    "C": 2.0,
+    "class_weight": "balanced",
+    "max_iter": 200
+  },
+  "metrics": {
+    "accuracy": 0.9854651162790697,
+    "precision": 0.937984496124031,
+    "recall": 0.9453125,
+    "f1": 0.9416342412451362,
+    "roc_auc": 0.9965863523230089,
+    "pr_auc": 0.9834082642562523,
+    "threshold": 0.5
+  },
+  "confusion_matrix": [
+    [
+      896,
+      8
+    ],
+    [
+      7,
+      121
+    ]
+  ]
+}
