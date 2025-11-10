@@ -107,6 +107,7 @@ streamlit run app/streamlit_app.py
 - Top Tokens（Plotly）＋ 圖表下方 Top‑N slider（1~100）
 - 模型指標（precision/recall/F1）
 - 閾值調整、即時推論（Spam/Ham 範例）
+- 線上示範：https://yt2rvxc2kfefpbph3qj2lf.streamlit.app/
 
 ## OpenSpec
 
