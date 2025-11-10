@@ -21,7 +21,7 @@ def save_figure(fig, path: Path) -> Path:
 
 def plot_class_distribution(df, label_col: str):
     counts = df[label_col].value_counts().sort_index()
-    fig, ax = plt.subplots(figsize=(5, 4))
+    fig, ax = plt.subplots(figsize=(4, 3))
     data = counts.reset_index()
     data.columns = ["label", "count"]
     sns.barplot(data=data, x="label", y="count", hue="label", ax=ax, palette="viridis", legend=False)
@@ -31,6 +31,7 @@ def plot_class_distribution(df, label_col: str):
     max_count = data["count"].max()
     for idx, value in enumerate(data["count"]):
         ax.text(idx, value + max_count * 0.01, f"{value}", ha="center")
+    fig.tight_layout(pad=0.8)
     return fig
 
 

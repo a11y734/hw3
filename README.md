@@ -1,6 +1,6 @@
-# AIoT 垃圾郵件智慧管線
+# AIoT 垃圾郵件智慧管理
 
-> 靈感來源：Packt《Hands-On Artificial Intelligence for Cybersecurity》Ch.3 與 [huanchen1107/2025ML-spamEmail](https://github.com/huanchen1107/2025ML-spamEmail)。重新實作資料預處理、可視化與 CLI/Streamlit 體驗，並以 OpenSpec 記錄需求。
+> 靈感來源：Packt《Hands-On Artificial Intelligence for Cybersecurity》Ch.3 。重新實作資料預處理、可視化與 CLI/Streamlit 體驗，並以 OpenSpec 記錄需求。
 
 ## 特色
 
@@ -95,13 +95,16 @@ python scripts/visualize_spam.py ^
 ### 5) Streamlit
 
 ```bash
+# 直接透過 Streamlit
 streamlit run app/streamlit_app.py
-```
+
+
 
 功能：
 
-- 讀取本機/上傳資料
-- 類別分佈、Top Tokens（Plotly）
+- 讀取本機/上傳資料，並自動挑選合適的 CSV
+- 類別分佈圖 × 數值表同列展示，節省空間
+- Top Tokens（Plotly）＋ 圖表下方 Top‑N slider（1~100）
 - 模型指標（precision/recall/F1）
 - 閾值調整、即時推論（Spam/Ham 範例）
 
