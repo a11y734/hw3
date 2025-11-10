@@ -1,0 +1,89 @@
+{
+  "input_rows": 10,
+  "output_rows": 10,
+  "label_col": "label",
+  "text_col": "text",
+  "clean_text_col": "text_clean",
+  "config": {
+    "lowercase": true,
+    "strip_html": true,
+    "remove_urls": true,
+    "remove_emails": true,
+    "remove_numbers": false,
+    "remove_punctuation": true,
+    "collapse_whitespace": true,
+    "remove_stopwords": false,
+    "custom_stopwords": null,
+    "stemming": false,
+    "stem_language": "english"
+  },
+  "step_files": [
+    "datasets\\processed\\steps\\00_00_original.csv",
+    "datasets\\processed\\steps\\01_01_lowercase.csv",
+    "datasets\\processed\\steps\\02_02_strip_html.csv",
+    "datasets\\processed\\steps\\03_03_remove_urls.csv",
+    "datasets\\processed\\steps\\04_04_remove_emails.csv",
+    "datasets\\processed\\steps\\05_06_remove_punctuation.csv",
+    "datasets\\processed\\steps\\06_07_collapse_ws.csv"
+  ],
+  "column_candidates": {
+    "columns": [
+      "label",
+      "text"
+    ],
+    "preview_rows": 5,
+    "examples": {
+      "label": [
+        "ham",
+        "ham",
+        "spam",
+        "ham",
+        "spam"
+      ],
+      "text": [
+        "Go until jurong point crazy.. Available only in bugis n great world la e buffet... Cine there got amore wat...",
+        "Ok lar... Joking wif u oni...",
+        "WINNER!! As a valued network customer you have been selected to receive a £900 prize reward!",
+        "I'm gonna be home soon and i don't want to talk about this stuff anymore tonight ok?",
+        "SIX chances to win CASH! Reply WIN NOW to claim your prize."
+      ]
+    }
+  },
+  "step_summary": [
+    {
+      "name": "00_original",
+      "non_null": 10,
+      "avg_length": 66.6
+    },
+    {
+      "name": "01_lowercase",
+      "non_null": 10,
+      "avg_length": 66.6
+    },
+    {
+      "name": "02_strip_html",
+      "non_null": 10,
+      "avg_length": 66.6
+    },
+    {
+      "name": "03_remove_urls",
+      "non_null": 10,
+      "avg_length": 66.6
+    },
+    {
+      "name": "04_remove_emails",
+      "non_null": 10,
+      "avg_length": 66.6
+    },
+    {
+      "name": "06_remove_punctuation",
+      "non_null": 10,
+      "avg_length": 66.6
+    },
+    {
+      "name": "07_collapse_ws",
+      "non_null": 10,
+      "avg_length": 63.6
+    }
+  ]
+}

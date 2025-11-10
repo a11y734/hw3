@@ -1,0 +1,30 @@
+id: spam-visual-pipeline
+title: SMS Spam Intelligence Pipeline
+status: implemented
+owners:
+  - codex
+description: >
+  Build a reproducible SMS spam classification workflow with enriched preprocessing,
+  visualization, CLI tooling, and a Streamlit interface inspired by Packt Chapter 3 patterns.
+assumptions:
+  - Dataset schema follows the SMS Spam Collection format (label + text columns).
+  - Python 3.11+ environment with pip is available.
+requirements:
+  - id: data-preprocess
+    text: CLI supports loading headerless CSVs, configurable label/text columns, and outputs per-step CSVs plus JSON summary.
+    verification: run `python scripts/preprocess_emails.py ... --save-step-columns` and inspect outputs.
+  - id: model-train
+    text: Training script fits TF-IDF + Logistic Regression with optional numeric columns and stores model + metadata under models/.
+    verification: run `python scripts/train_spam_classifier.py ...` and confirm `models/spam_pipeline.joblib` & `models/meta.json`.
+  - id: inference
+    text: Predict script handles single text or batch CSV and prints/saves probabilities + labels.
+    verification: run `python scripts/predict_spam.py --text "..."`
+  - id: visualization
+    text: Visualization CLI generates class distribution, token frequency, ROC/PR, confusion matrix, and threshold sweep assets.
+    verification: run `python scripts/visualize_spam.py ... --class-dist --token-freq --roc --pr --threshold-sweep`.
+  - id: streamlit
+    text: Streamlit dashboard previews dataset, displays token stats, shows model metrics, and performs live inference with threshold slider.
+    verification: run `streamlit run app/streamlit_app.py`.
+tools:
+  - openspec
+  - AI Coding CLI
