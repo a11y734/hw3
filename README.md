@@ -1,5 +1,7 @@
 # AIoT 垃圾郵件智慧管理
 
+**Live Demo（Streamlit Cloud）** 👉 https://yt2rvxc2kfefpbph3qj2lf.streamlit.app/
+
 > 靈感來源：Packt《Hands-On Artificial Intelligence for Cybersecurity》Ch.3 。重新實作資料預處理、可視化與 CLI/Streamlit 體驗，並以 OpenSpec 記錄需求。
 
 ## 特色
